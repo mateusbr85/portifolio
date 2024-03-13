@@ -162,7 +162,7 @@ export const Home = () => {
                             <Timeline.TimelineContent 
                                 title='Full-Stack Developer Pleno'
                                 subTitle='NEC Brasil Desenvolvimento de Sistemas'
-                                time='Desde de Agosto de 2021'
+                                time='Desde de Agosto de 2022'
                                 descrption='Fui Promovido nesse momento a desenvolvedor pleno com resposabilidade de criar novas aplicações e manter
                                 as mais diversas e antigas aplicações, também estou com responsabilidade para cuidar e gerenciar 3 projetos
                                 aonde não apenas sou responsável pelo meu codigo, como no treinamento e Code Review de codigos de terceiros'
@@ -170,7 +170,7 @@ export const Home = () => {
                             <Timeline.TimelineContent 
                                 title='Full-Stack Developer Junior'
                                 subTitle='NEC Brasil Desenvolvimento de Sistemas'
-                                time='Desde de Agosto de 2021'
+                                time='Desde de janeiro de 2022'
                                 descrption='Eu tive a autonomia para arquitetar, construir e desenvolver projetos do zero, abrangendo a implantação em 
                                 produção e a subsequente manutenção. Desenvolvi projetos com foco na resolução de problemas e na otimização de processos 
                                 internos. Criei websites institucionais e páginas de vendas para produtos da empresa. Nestes projetos, empreguei a arquitetura 
