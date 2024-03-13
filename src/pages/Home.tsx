@@ -78,7 +78,9 @@ export const Home = () => {
                     '
                 >
                     <div
-                        className='flex bg-text_dark w-full min-h-[30rem] p-8 rounded-md shadow-md gap-5'
+                        className='flex bg-text_dark w-full min-h-[30rem] p-8 rounded-md shadow-md gap-5
+                            dark:bg-accent_dark dark:shadow-primary_dark dark:shadow-2xl dark: text-text_dark
+                        '
                     >
                         <div
                             className='w-[40%]'
