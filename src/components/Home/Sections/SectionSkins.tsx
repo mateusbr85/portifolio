@@ -69,6 +69,19 @@ export const SectionSkins = () => {
             id: 'typescript',
             text: `TypeScript é uma extensão do JavaScript que adiciona tipos estáticos opcionais, proporcionando detecção de erros em tempo de compilação e facilitando o
             desenvolvimento de aplicativos web robustos e escaláveis.`
+        },
+        {
+            id: 'express',
+            text: `
+            Express.js é um framework minimalista para Node.js, utilizado para criar aplicativos web e APIs de forma eficiente. Com uma sintaxe simples e uma ampla variedade
+             de recursos disponíveis, simplifica o desenvolvimento web, permitindo que os desenvolvedores se concentrem na criação de funcionalidades.`
+        },
+        {
+            id: 'node',
+            text: `
+            Node.js é um ambiente de execução JavaScript de código aberto e orientado a eventos, projetado para construir aplicativos de rede escaláveis. Com seu modelo de E/S 
+            não bloqueante e eficiente, é amplamente utilizado para desenvolver servidores web, APIs e aplicativos de linha de comando, oferecendo alta performance e facilidade 
+            de desenvolvimento.`
         }
     ]
     const [text, setText] = useState('');
@@ -197,7 +210,28 @@ export const SectionSkins = () => {
                             src='/icons/typescript.png'
                         />
                     </Box>
-
+                    <Box
+                        onMouseEnter={(event: any) => onMouseEnter(event)}
+                        onMouseLeave={() => setText('')}
+                    >
+                        <img
+                            id="node"
+                            alt='Icone do typescript'
+                            className='w-14 '
+                            src='/icons/node.png'
+                        />
+                    </Box>
+                    <Box
+                        onMouseEnter={(event: any) => onMouseEnter(event)}
+                        onMouseLeave={() => setText('')}
+                    >
+                        <img
+                            id="express"
+                            alt='Icone do typescript'
+                            className='w-14 '
+                            src='/icons/express.png'
+                        />
+                    </Box>
                 </div>
             </div>
         </section>
