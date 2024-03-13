@@ -75,16 +75,21 @@ export const Home = () => {
                 </section>
                 <section id='about' className='min-h-screen flex items-center text-center
                         container mx-auto  border-t-2 border-background_dark/10 py-10
+                        dark:border-text_dark/20
                     '
                 >
                     <div
-                        className='flex bg-text_dark w-full min-h-[30rem] p-8 rounded-md shadow-md gap-5'
+                        className='flex bg-text_dark w-full min-h-[30rem] p-8 rounded-md shadow-md gap-5
+                            dark:bg-secundary_dark dark:shadow-primary_dark dark:shadow-2xl dark:text-text_dark
+                        '
                     >
                         <div
                             className='w-[40%]'
                         >
                             <div
-                                className='flex absolute bg-white rounded-3xl h-10 items-center p-2 mt-4 ml-4 drop-shadow-xl'
+                                className='flex absolute bg-white rounded-3xl h-10 items-center p-2 mt-4 ml-4 drop-shadow-xl
+                                    dark:bg-secundary_dark
+                                '
                             >
                                 Criador do Mv.Code
                             </div>
@@ -112,7 +117,9 @@ export const Home = () => {
                                     Mateus Veloso
                                 </span>
                                 <span
-                                    className='font-semibold text-secundary_dark/50'
+                                    className='font-semibold text-secundary_dark/50
+                                        dark:text-text_dark/50
+                                    '
                                 >
                                     Full Stack Developer e UI Designer
                                 </span>
@@ -158,6 +165,7 @@ export const Home = () => {
                     id='experience'
                     className='min-h-screen grid grid-cols-2 items-center text-center
                         container mx-auto gap-10 border-b-2 border-t-2 border-background_dark/10 py-10
+                        dark:border-text_dark/20
                     '
                 >
                     <h2
@@ -196,7 +204,9 @@ export const Home = () => {
                 </section>
                 <SectionSkins/>
                 <footer
-                    className='flex h-20 justify-between items-center'
+                    className='container mx-auto flex h-20 justify-between items-center
+                        dark:text-text_dark
+                    '
                 >
                     <p
                         className='font-semibold text-lg opacity-75'

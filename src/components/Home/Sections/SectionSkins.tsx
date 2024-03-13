@@ -86,25 +86,30 @@ export const SectionSkins = () => {
             id='skins'
             className='min-h-screen flex items-center text-center
             container mx-auto border-b-2 border-background_dark/10 py-10
+            dark:border-text_dark/20
         '
         >
             <div
                 id="skills"
-                className="grid grid-cols-2 gap-6 min-h-96 bg-secundary_light p-10 rounded-lg drop-shadow-lg items-center"
+                className="grid grid-cols-2 gap-6 min-h-96 bg-secundary_light p-10 rounded-lg drop-shadow-lg items-center
+                    dark:bg-secundary_dark dark:text-text_dark dark:shadow-primary_dark dark:shadow-2xl
+                "
             >
                 <div
                     className="flex flex-col gap-3 items-start h-full"
                 >
                     <h2
                         className='text-4xl font-bold
-                    dark:text-text_dark bg
+                    dark:text-text_dark
                 '
                     >
                         Conhecimentos.
                     </h2>
-                    <span className="text-background_dark/70">*passe o cursor do mouse no card para ler*</span>
+                    <span className="text-background_dark/70 dark:text-text_dark">*passe o cursor do mouse no card para ler*</span>
                     <p
-                        className="text-start text-background_dark/60"
+                        className="text-start text-background_dark/60
+                            dark:text-text_dark
+                        "
                     >
                         {text}
                     </p>
