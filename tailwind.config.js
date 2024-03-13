@@ -16,7 +16,8 @@ export default {
       primary_light: '#2F27CE',
       secundary_light: '#DDDBFF',
       accent_light: '#443DFF',
-      text_light: '#040316'
+      text_light: '#040316',
+      white: '#FFF'
     }
   },
 plugins: [],

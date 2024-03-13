@@ -1,5 +1,5 @@
 // import { useState } from 'react';
-import Logo from '../../assets/logo.jpg'
+import Logo from '../../assets/logo.png'
 import { Switch } from '../formFields/Switch';
 import { useTheme } from '../../context/ThemeProvider';
 import { useState } from 'react';
@@ -25,7 +25,6 @@ export const Header = () => {
     // }
 
     const toogleDark = ({value}: {value: boolean}) => {
-        console.log({value})
         if(value == true) {
             setTheme('dark')
         }
@@ -36,7 +35,12 @@ export const Header = () => {
     }
 
     return (
-        <header className=' bg-background_light transition-all fixed top-0 left-0 right-0 w-full pt-5 pr-20 pl-20 h-24'>
+        <header className=' 
+            bg-background_light transition-all fixed top-0 left-0 right-0 w-full pt-5 pr-20 pl-20 h-24
+            backdrop-filter backdrop-blur-md bg-opacity-75
+            dark:bg-background_dark dark:text-background_light dark:backdrop-filter dark:backdrop-blur-md dark:bg-opacity-75
+        '
+        >
             <main className='flex justify-between items-center'>
                 <div className='flex items-center justify-start flex-row gap-4 '>
                     <img

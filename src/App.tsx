@@ -4,7 +4,7 @@ import { DashboardRoutes } from './routes/Dashboard.routes';
 function App() {
 
   return (
-    <ThemeProvider defaultTheme='dark'>
+    <ThemeProvider defaultTheme=''>
       <DashboardRoutes/>
     </ThemeProvider>
   )

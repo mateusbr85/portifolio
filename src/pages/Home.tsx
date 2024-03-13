@@ -1,18 +1,159 @@
 import { Header } from '../components/header/Header';
 import { useTheme } from '../context/ThemeProvider';
+import PerfilImage from '../assets/image-perfil.jpg';
+import image2d from '../assets/image-coder.jpg'
+import { Button } from '../components/formFields/Button';
+import { Box } from '../components/formFields/Box';
+import { Typewriter } from 'react-simple-typewriter';
 
 export const Home = () => {
-    const {theme} = useTheme();
+    const { theme } = useTheme();
 
-    return(<>
+    return (<>
         <div className={theme}>
-            <body className="bg-background_light dark:bg-background_dark">
-                <Header/>
-                <section id='hero' className='flex min-h-screen pt-28'>
-                    <div>
-                        <p>
-                            Fazendo a adsad
+            <body className="bg-background_light min-h-screen
+            dark:bg-background_dark px-20">
+                <Header />
+                <section
+                    id='home'
+                    className='min-h-screen flex items-center text-center
+                    container mx-auto gap-12
+                    '
+                >
+                    <div className='flex h-90 w-[30%] '>
+                        <img
+                            className='rounded-full shadow-2xl shadow-primary_light object-cover'
+                            src={PerfilImage}
+                        />
+                    </div>
+                    <div className='flex flex-col h-80 w-[70%] text-start gap-5
+                        dark:text-background_light
+                    '>
+                        <p
+                            className='text-5xl font-bold w-full'
+                        >
+                            Auxiliando empresas na construção <span className='text-accent_light'>de produtos digitais </span>
+                            <Typewriter
+                                words={['modernos', 'e de alta qualidade.']}
+                                loop={5}
+                                cursor
+                                cursorStyle='|'
+                                typeSpeed={80}
+                                deleteSpeed={50}
+                                delaySpeed={1000}
+             
+                            />
                         </p>
+                        <p>
+                            Combinando habilidades em Design, Desenvolvimento Frontend/Backend e expertise profissional para destacar seu produto no mercado.
+                        </p>
+                        <div
+                            className='flex flex-wrap flex-row gap-3'
+                        >
+                            <Button
+                                colorButton='primary'
+                            >
+                                Aprenda Node Comigo
+                            </Button>
+                            <Button
+                                colorButton='secundary'
+                            >
+                                Tire sua ideia do Papel
+                            </Button>
+                            <Button
+                                colorButton='secundary'
+                            >
+                                Quem sou Eu
+                            </Button>
+                        </div>
+                    </div>
+                </section>
+                <section id='about' className='min-h-screen flex items-center text-center
+                        container mx-auto
+                    '
+                >
+                    <div
+                        className='flex bg-text_dark w-full h-[30rem] p-8 rounded-md shadow-md gap-5'
+                    >
+                        <div
+                            className='w-[40%]'
+                        >
+                            <div
+                                className='flex absolute bg-white rounded-3xl h-10 items-center p-2 mt-4 ml-4 drop-shadow-xl'
+                            >
+                                Criador do Mv.Code
+                            </div>
+                            <img
+                                className='w-[100%] h-full object-cover rounded-sm'
+                                src={image2d}
+                            />
+
+                        </div>
+                        <div
+                            className='w-[60%] flex flex-col text-start justify-between'
+                        >
+                            <div
+                                className='flex flex-col'
+                            >
+                                <span
+                                    className='font-bold text-md text-accent_light'
+                                >
+                                    Quem eu Sou
+                                </span>
+                                <span
+                                    className='font-bold text-2xl'
+                                >
+                                    Mateus Veloso
+                                </span>
+                                <span
+                                    className='font-semibold text-secundary_dark/50'
+                                >
+                                    Full Stack Developer e UI Designer
+                                </span>
+                            </div>
+                            <div>
+                                <p
+                                    className='text-sm'
+                                >
+                                    Meu nome é Mateus Veloso, sou criador da marca MvCode, que é responsável por criar conteúdos para programadores no Instagram e YouTube, desenvolvendo um trabalho de geração de valor em conteúdo sobre programação. Atualmente trabalho como Desenvolvedor FullStack na NEC Brasil desenvolvimento de sistemas, mas também atuo como Freelancer Developer. Sou uma pessoa que ama desafios, assim como todo desenvolvedor.
+
+                                    Tenho mais de 3 anos de Experiência no mercado de desenvolvimento Web. Durante esse período, projetei, arquitetei e entreguei inúmeros projetos, desde de Aplicações front-end quanto Apis para o Back-end, nisso desenvolvi soluções completas para servidores linux e nuvem. Meus conhecimento atual inclui principalmente TypeScript, React.js, React-Native e Node.js.
+                                </p>
+                            </div>
+                            <div
+                                className='flex flex-row w-full flex-wrap gap-6'
+                            >
+                                <Box>
+                                    <i className="fab fa-instagram fa-2x"></i>
+                                </Box>
+                                <Box>
+                                    <i className="fab fa-linkedin fa-2x"></i>
+                                </Box>
+                                <Box>
+
+                                    <i className="fab fa-youtube fa-2x"></i>
+                                </Box>
+                                <Box>
+
+                                    <i className="fab fa-github fa-2x"></i>
+                                </Box>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section
+                    id='experience'
+                    className='min-h-screen flex items-center text-center
+                        container mx-auto
+                    '
+                >
+                    <h2
+                        className='w-full text-4xl font-bold'
+                    >
+                        Educação & Experiência
+                    </h2>
+                    <div>
+
                     </div>
                 </section>
             </body>
