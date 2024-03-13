@@ -5,6 +5,7 @@ import image2d from '../assets/image-coder.jpg'
 import { Button } from '../components/formFields/Button';
 import { Box } from '../components/formFields/Box';
 import { Typewriter } from 'react-simple-typewriter';
+import { Timeline } from '../components/formFields/Timeline';
 
 export const Home = () => {
     const { theme } = useTheme();
@@ -22,6 +23,7 @@ export const Home = () => {
                 >
                     <div className='flex h-90 w-[30%] '>
                         <img
+                            alt='Imagem de perfil do Mateus Veloso'
                             className='rounded-full shadow-2xl shadow-primary_light object-cover'
                             src={PerfilImage}
                         />
@@ -41,7 +43,7 @@ export const Home = () => {
                                 typeSpeed={80}
                                 deleteSpeed={50}
                                 delaySpeed={1000}
-             
+
                             />
                         </p>
                         <p>
@@ -62,6 +64,7 @@ export const Home = () => {
                             </Button>
                             <Button
                                 colorButton='secundary'
+                                hrefButton='#about'
                             >
                                 Quem sou Eu
                             </Button>
@@ -84,6 +87,7 @@ export const Home = () => {
                                 Criador do Mv.Code
                             </div>
                             <img
+                                alt='imagem de um desenho 2d'
                                 className='w-[100%] h-full object-cover rounded-sm'
                                 src={image2d}
                             />
@@ -143,19 +147,45 @@ export const Home = () => {
                 </section>
                 <section
                     id='experience'
-                    className='min-h-screen flex items-center text-center
-                        container mx-auto
+                    className='min-h-screen grid grid-cols-2 items-center text-center
+                        container mx-auto gap-10
                     '
                 >
                     <h2
-                        className='w-full text-4xl font-bold'
+                        className='text-4xl font-bold
+                            dark:text-text_dark bg
+                        '
                     >
                         Educação & Experiência
                     </h2>
-                    <div>
-
-                    </div>
+                        <Timeline.Root>
+                            <Timeline.TimelineContent 
+                                title='Full-Stack Developer Pleno'
+                                subTitle='NEC Brasil Desenvolvimento de Sistemas'
+                                time='Desde de Agosto de 2021'
+                                descrption='Fui Promovido nesse momento a desenvolvedor pleno com resposabilidade de criar novas aplicações e manter
+                                as mais diversas e antigas aplicações, também estou com responsabilidade para cuidar e gerenciar 3 projetos
+                                aonde não apenas sou responsável pelo meu codigo, como no treinamento e Code Review de codigos de terceiros'
+                            />
+                            <Timeline.TimelineContent 
+                                title='Full-Stack Developer Junior'
+                                subTitle='NEC Brasil Desenvolvimento de Sistemas'
+                                time='Desde de Agosto de 2021'
+                                descrption='Eu tive a autonomia para arquitetar, construir e desenvolver projetos do zero, abrangendo a implantação em 
+                                produção e a subsequente manutenção. Desenvolvi projetos com foco na resolução de problemas e na otimização de processos 
+                                internos. Criei websites institucionais e páginas de vendas para produtos da empresa. Nestes projetos, empreguei a arquitetura 
+                                MVC, Arquitetura Limpa e Arquitetura Hexagonal, utilizando Node.Js com Express no backend, PostgreSQL com Sequelize ORM para o banco de dados, e ReactJS com Redux e 
+                                zustand no frontend.'
+                            />
+                            <Timeline.TimelineContent 
+                                title='Estagio'
+                                subTitle='NEC Brasil Desenvolvimento de Sistemas'
+                                time='Desde de Agosto de 2021'
+                                descrption='Trabalhava apenas com pequenas manutenções no Código, e poucos novas iomplementações'
+                            />
+                        </Timeline.Root>
                 </section>
+
             </body>
         </div>
     </>)

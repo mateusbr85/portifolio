@@ -17,33 +17,34 @@ const LiHover = ({ ...props }: { text: string }) => {
 
 export const Header = () => {
     const { setTheme } = useTheme();
-    const [dark,setDark] = useState(false)
+    const [dark, setDark] = useState(false)
     // const [isNavOpen, setIsNavOpen] = useState(false);
 
     // const toogleNav = () => {
     //     setIsNavOpen(!isNavOpen)
     // }
 
-    const toogleDark = ({value}: {value: boolean}) => {
-        if(value == true) {
+    const toogleDark = ({ value }: { value: boolean }) => {
+        if (value == true) {
             setTheme('dark')
         }
-        if(value == false) {
+        if (value == false) {
             setTheme('')
         }
         setDark(value)
     }
 
     return (
-        <header className=' 
+        <header className=' z-20
             bg-background_light transition-all fixed top-0 left-0 right-0 w-full pt-5 pr-20 pl-20 h-24
             backdrop-filter backdrop-blur-md bg-opacity-75
             dark:bg-background_dark dark:text-background_light dark:backdrop-filter dark:backdrop-blur-md dark:bg-opacity-75
         '
         >
-            <main className='flex justify-between items-center'>
+            <main className='flex justify-between items-center container mx-auto'>
                 <div className='flex items-center justify-start flex-row gap-4 '>
                     <img
+                        alt='Imagem que descreve a logo da marca MvCode'
                         width={60}
                         height={60}
                         src={Logo}

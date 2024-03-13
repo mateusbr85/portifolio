@@ -4,10 +4,11 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     width?: string,
     heigth?: string,
     // colorButton?: string
-    colorButton: 'primary' | 'secundary'
+    colorButton: 'primary' | 'secundary',
+    hrefButton?: string
 }
 
-export const Button: React.FC<ButtonProps> = ({ children,...props }) => {
+export const Button: React.FC<ButtonProps> = ({ children, hrefButton = '',...props }) => {
     const [colors,setColors] = useState(
         {
             text_color: 'text-background_light',
@@ -38,21 +39,23 @@ export const Button: React.FC<ButtonProps> = ({ children,...props }) => {
     },[])
     return (
         <div className=''>
-            <button
-                {...props}
-                className={`
-                max-w-screen-md max-h-screen ${colors.bg_color} ${colors.text_color} rounded-md
-                dark:bg-primary_dark dark:text-background_light
-                flex
-                items-center
-                justify-center
-                container mx-auto
-                p-2
-                drop-shadow-md
-            `}
-            >
-                {children}
-            </button>
+            <a href={hrefButton}>
+                <button
+                    {...props}
+                    className={`
+                    max-w-screen-md max-h-screen ${colors.bg_color} ${colors.text_color} rounded-md
+                    dark:bg-primary_dark dark:text-background_light
+                    flex
+                    items-center
+                    justify-center
+                    container mx-auto
+                    p-2
+                    drop-shadow-md
+                `}
+                >
+                    {children}
+                </button>
+            </a>
         </div>
     )
 }
