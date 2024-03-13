@@ -6,6 +6,8 @@ import { Button } from '../components/formFields/Button';
 import { Box } from '../components/formFields/Box';
 import { Typewriter } from 'react-simple-typewriter';
 import { Timeline } from '../components/formFields/Timeline';
+import { SectionSkins } from '../components/Home/Sections/SectionSkins';
+import Logo from '../assets/logo.png'
 
 export const Home = () => {
     const { theme } = useTheme();
@@ -72,11 +74,11 @@ export const Home = () => {
                     </div>
                 </section>
                 <section id='about' className='min-h-screen flex items-center text-center
-                        container mx-auto
+                        container mx-auto  border-t-2 border-background_dark/10 py-10
                     '
                 >
                     <div
-                        className='flex bg-text_dark w-full h-[30rem] p-8 rounded-md shadow-md gap-5'
+                        className='flex bg-text_dark w-full min-h-[30rem] p-8 rounded-md shadow-md gap-5'
                     >
                         <div
                             className='w-[40%]'
@@ -127,17 +129,24 @@ export const Home = () => {
                             <div
                                 className='flex flex-row w-full flex-wrap gap-6'
                             >
-                                <Box>
+                                <Box
+                                    hrefButton='https://www.instagram.com/mv.code/'
+                                >
                                     <i className="fab fa-instagram fa-2x"></i>
                                 </Box>
-                                <Box>
+                                <Box
+                                    hrefButton='https://www.linkedin.com/in/mateus-veloso/'
+                                >
                                     <i className="fab fa-linkedin fa-2x"></i>
                                 </Box>
-                                <Box>
-
+                                <Box
+                                    hrefButton='https://www.youtube.com/@mvcode.'
+                                >
                                     <i className="fab fa-youtube fa-2x"></i>
                                 </Box>
-                                <Box>
+                                <Box
+                                    hrefButton='https://github.com/mateusbr85'
+                                >
 
                                     <i className="fab fa-github fa-2x"></i>
                                 </Box>
@@ -148,7 +157,7 @@ export const Home = () => {
                 <section
                     id='experience'
                     className='min-h-screen grid grid-cols-2 items-center text-center
-                        container mx-auto gap-10
+                        container mx-auto gap-10 border-b-2 border-t-2 border-background_dark/10 py-10
                     '
                 >
                     <h2
@@ -185,62 +194,29 @@ export const Home = () => {
                         />
                     </Timeline.Root>
                 </section>
-                <section
-                    id='skins'
-                    className='min-h-screen grid grid-cols-2 items-center text-center
-                        container mx-auto gap-10 
-                    '
+                <SectionSkins/>
+                <footer
+                    className='flex h-20 justify-between items-center'
                 >
-                    <div
-
+                    <p
+                        className='font-semibold text-lg opacity-75'
                     >
-                        <h2
-                            className='text-4xl font-bold
-                                dark:text-text_dark bg
-                            '
+                        Copyright © 2024 mvcode.com.br Todos os direitos reservados.
+                    </p>
+                    <div
+                        className='flex items-center gap-2 w-44'
+                    >
+                        <h4
+                            className='text-lg font-bold opacity-75'
                         >
-                            Conhecimentos.
-                        </h2>
-                        <span>*Passe o cursor em cima do mouse para ler*</span>
+                            Powered by
+                        </h4>
+                        <img 
+                            className='w-14 h-14'
+                            src={Logo}
+                        />
                     </div>
-                    <div
-                        className='flex flex-row w-full flex-wrap gap-10'
-                    >
-                        <Box>
-                            <i className="fab fa-react fa-2x"></i>
-                        </Box>
-                        <Box>
-                            <i className="fab fa-css3-alt fa-2x"></i>
-                        </Box>
-                        <Box>
-                            <i className="fab fa-html5 fa-2x"></i>
-                        </Box>
-                        <Box>
-                            <i className="fab fa-js-square fa-2x"></i>
-                        </Box>
-                        <Box>
-                            <i className="fab fa-sass fa-2x"></i>
-                        </Box>
-                        <Box>
-                            <img
-                                alt='icone do tailwind'
-                                className='w-14 '
-                                src='../../public/icons/next.svg'
-                            />
-                        </Box>
-                        <Box>
-                            <img
-                                alt='icone do tailwind'
-                                className='w-14 '
-                                src='../../public/icons/tailwindcss.svg'
-                            />
-                        </Box>
-                        <Box>
-
-                            <i className="fab fa-js-square fa-2x"></i>
-                        </Box>
-                    </div>
-                </section>
+                </footer>
             </body>
         </div>
     </>)
