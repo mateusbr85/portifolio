@@ -158,34 +158,89 @@ export const Home = () => {
                     >
                         Educação & Experiência
                     </h2>
-                        <Timeline.Root>
-                            <Timeline.TimelineContent 
-                                title='Full-Stack Developer Pleno'
-                                subTitle='NEC Brasil Desenvolvimento de Sistemas'
-                                time='Desde de Agosto de 2022'
-                                descrption='Fui Promovido nesse momento a desenvolvedor pleno com resposabilidade de criar novas aplicações e manter
+                    <Timeline.Root>
+                        <Timeline.TimelineContent
+                            title='Full-Stack Developer Pleno'
+                            subTitle='NEC Brasil Desenvolvimento de Sistemas'
+                            time='Desde de Agosto de 2022'
+                            descrption='Fui Promovido nesse momento a desenvolvedor pleno com resposabilidade de criar novas aplicações e manter
                                 as mais diversas e antigas aplicações, também estou com responsabilidade para cuidar e gerenciar 3 projetos
                                 aonde não apenas sou responsável pelo meu codigo, como no treinamento e Code Review de codigos de terceiros'
-                            />
-                            <Timeline.TimelineContent 
-                                title='Full-Stack Developer Junior'
-                                subTitle='NEC Brasil Desenvolvimento de Sistemas'
-                                time='Desde de janeiro de 2022'
-                                descrption='Eu tive a autonomia para arquitetar, construir e desenvolver projetos do zero, abrangendo a implantação em 
+                        />
+                        <Timeline.TimelineContent
+                            title='Full-Stack Developer Junior'
+                            subTitle='NEC Brasil Desenvolvimento de Sistemas'
+                            time='Desde de janeiro de 2022'
+                            descrption='Eu tive a autonomia para arquitetar, construir e desenvolver projetos do zero, abrangendo a implantação em 
                                 produção e a subsequente manutenção. Desenvolvi projetos com foco na resolução de problemas e na otimização de processos 
                                 internos. Criei websites institucionais e páginas de vendas para produtos da empresa. Nestes projetos, empreguei a arquitetura 
                                 MVC, Arquitetura Limpa e Arquitetura Hexagonal, utilizando Node.Js com Express no backend, PostgreSQL com Sequelize ORM para o banco de dados, e ReactJS com Redux e 
                                 zustand no frontend.'
-                            />
-                            <Timeline.TimelineContent 
-                                title='Estagio'
-                                subTitle='NEC Brasil Desenvolvimento de Sistemas'
-                                time='Desde de Agosto de 2021'
-                                descrption='Trabalhava apenas com pequenas manutenções no Código, e poucos novas iomplementações'
-                            />
-                        </Timeline.Root>
+                        />
+                        <Timeline.TimelineContent
+                            title='Estagio'
+                            subTitle='NEC Brasil Desenvolvimento de Sistemas'
+                            time='Desde de Agosto de 2021'
+                            descrption='Trabalhava apenas com pequenas manutenções no Código, e poucos novas iomplementações'
+                        />
+                    </Timeline.Root>
                 </section>
+                <section
+                    id='skins'
+                    className='min-h-screen grid grid-cols-2 items-center text-center
+                        container mx-auto gap-10 
+                    '
+                >
+                    <div
 
+                    >
+                        <h2
+                            className='text-4xl font-bold
+                                dark:text-text_dark bg
+                            '
+                        >
+                            Conhecimentos.
+                        </h2>
+                        <span>*Passe o cursor em cima do mouse para ler*</span>
+                    </div>
+                    <div
+                        className='flex flex-row w-full flex-wrap gap-10'
+                    >
+                        <Box>
+                            <i className="fab fa-react fa-2x"></i>
+                        </Box>
+                        <Box>
+                            <i className="fab fa-css3-alt fa-2x"></i>
+                        </Box>
+                        <Box>
+                            <i className="fab fa-html5 fa-2x"></i>
+                        </Box>
+                        <Box>
+                            <i className="fab fa-js-square fa-2x"></i>
+                        </Box>
+                        <Box>
+                            <i className="fab fa-sass fa-2x"></i>
+                        </Box>
+                        <Box>
+                            <img
+                                alt='icone do tailwind'
+                                className='w-14 '
+                                src='../../public/icons/next.svg'
+                            />
+                        </Box>
+                        <Box>
+                            <img
+                                alt='icone do tailwind'
+                                className='w-14 '
+                                src='../../public/icons/tailwindcss.svg'
+                            />
+                        </Box>
+                        <Box>
+
+                            <i className="fab fa-js-square fa-2x"></i>
+                        </Box>
+                    </div>
+                </section>
             </body>
         </div>
     </>)
