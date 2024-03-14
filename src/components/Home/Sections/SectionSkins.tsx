@@ -87,9 +87,11 @@ export const SectionSkins = () => {
     const [text, setText] = useState('');
 
     const onMouseEnter = (event: any) => {
-        for (const item of textToImages) {
-            if (item.id === event.target.firstChild.id) {
-                setText(item.text)
+        if(window.innerWidth >= 1024) {
+            for (const item of textToImages) {
+                if (item.id === event.target?.firstChild.id) {
+                    setText(item.text)
+                }
             }
         }
     }
@@ -97,19 +99,21 @@ export const SectionSkins = () => {
     return (
         <section
             id='skins'
-            className='min-h-screen flex items-center text-center
+            className='min-h-screen flex items-center text-center justify-center
             container mx-auto border-b-2 border-background_dark/10 py-10
             dark:border-text_dark/20
         '
         >
             <div
                 id="skills"
-                className="grid grid-cols-2 gap-6 min-h-96 bg-secundary_light p-10 rounded-lg drop-shadow-lg items-center
+                className="flex flex-col gap-6 min-h-96 bg-secundary_light p-10 rounded-lg drop-shadow-lg items-center
+                    lg:grid grid-cols-2 md:justify-center
                     dark:bg-secundary_dark dark:text-text_dark dark:shadow-primary_dark dark:shadow-2xl
                 "
             >
                 <div
-                    className="flex flex-col gap-3 items-start h-full"
+                    className="flex flex-col gap-3 items-start h-full
+                    "
                 >
                     <h2
                         className='text-4xl font-bold
@@ -128,7 +132,9 @@ export const SectionSkins = () => {
                     </p>
                 </div>
                 <div
-                    className='flex flex-row w-full flex-wrap gap-10'
+                    className='grid grid-cols-3 w-full flex-wrap gap-6 justify-center
+                        lg:flex flex-row lg:gap-10
+                    '
                 >
                     <Box
                         onMouseEnter={(event: any) => onMouseEnter(event)}

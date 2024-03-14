@@ -15,26 +15,38 @@ export const Home = () => {
     return (<>
         <div className={theme}>
             <body className="bg-background_light min-h-screen
-            dark:bg-background_dark px-20">
+            px-10 p-32
+            lg:px-20
+            dark:bg-background_dark 
+            "
+            >
                 <Header />
                 <section
                     id='home'
-                    className='min-h-screen flex items-center text-center
+                    className='h-[40rem] flex items-center text-center
                     container mx-auto gap-12
+                    flex-col 
+                    lg:flex-row lg:min-h-screen
+                    md:flex-row
                     '
                 >
-                    <div className='flex h-90 w-[30%] '>
+                    <div className='flex h-120 w-[50%] 
+                        lg:max-h-90 lg:w-[30%]
+                    '>
                         <img
                             alt='Imagem de perfil do Mateus Veloso'
                             className='rounded-full shadow-2xl shadow-primary_light object-cover'
                             src={PerfilImage}
                         />
                     </div>
-                    <div className='flex flex-col h-80 w-[70%] text-start gap-5
+                    <div className='flex flex-col h-80 w-full text-center  gap-5
+                        lg:w-[70%] lg:text-start
                         dark:text-background_light
                     '>
                         <p
-                            className='text-5xl font-bold w-full'
+                            className='text-2xl font-bold w-full
+                                lg:text-5xl
+                            '
                         >
                             Auxiliando empresas na construção <span className='text-accent_light'>de produtos digitais </span>
                             <Typewriter
@@ -52,7 +64,9 @@ export const Home = () => {
                             Combinando habilidades em Design, Desenvolvimento Frontend/Backend e expertise profissional para destacar seu produto no mercado.
                         </p>
                         <div
-                            className='flex flex-wrap flex-row gap-3'
+                            className='flex justify-center gap-3
+                            lg:justify-start lg:flex-wrap lg:flex-row
+                            '
                         >
                             <Button
                                 colorButton='primary'
@@ -79,12 +93,15 @@ export const Home = () => {
                     '
                 >
                     <div
-                        className='flex bg-text_dark w-full min-h-[30rem] p-8 rounded-md shadow-md gap-5
+                        className='flex flex-col bg-text_dark w-full p-8 rounded-md shadow-md gap-5
+                        lg:min-h-[30rem] lg:flex-row
                             dark:bg-secundary_dark dark:shadow-primary_dark dark:shadow-2xl dark:text-text_dark
                         '
                     >
                         <div
-                            className='w-[40%]'
+                            className='
+                                lg:w-[40%]
+                            '
                         >
                             <div
                                 className='flex absolute bg-white rounded-3xl h-10 items-center p-2 mt-4 ml-4 drop-shadow-xl
@@ -101,10 +118,14 @@ export const Home = () => {
 
                         </div>
                         <div
-                            className='w-[60%] flex flex-col text-start justify-between'
+                            className='flex flex-col text-start justify-between gap-5
+                                lg:w-[60%] lg:gap-0
+                            '
                         >
                             <div
-                                className='flex flex-col'
+                                className='flex flex-col items items-center
+                                    lg:items-start
+                                '
                             >
                                 <span
                                     className='font-bold text-md text-accent_light'
@@ -126,7 +147,7 @@ export const Home = () => {
                             </div>
                             <div>
                                 <p
-                                    className='text-sm'
+                                    className='text-sm text-justify'
                                 >
                                     Meu nome é Mateus Veloso, sou criador da marca MvCode, que é responsável por criar conteúdos para programadores no Instagram e YouTube, desenvolvendo um trabalho de geração de valor em conteúdo sobre programação. Atualmente trabalho como Desenvolvedor FullStack na NEC Brasil desenvolvimento de sistemas, mas também atuo como Freelancer Developer. Sou uma pessoa que ama desafios, assim como todo desenvolvedor.
 
@@ -134,7 +155,9 @@ export const Home = () => {
                                 </p>
                             </div>
                             <div
-                                className='flex flex-row w-full flex-wrap gap-6'
+                                className='flex flex-row w-full flex-wrap gap-6 justify-between
+                                    lg:justify-normal
+                                '
                             >
                                 <Box
                                     hrefButton='https://www.instagram.com/mv.code/'
@@ -163,8 +186,9 @@ export const Home = () => {
                 </section>
                 <section
                     id='experience'
-                    className='min-h-screen grid grid-cols-2 items-center text-center
+                    className='flex flex-col min-h-screen  items-center text-center
                         container mx-auto gap-10 border-b-2 border-t-2 border-background_dark/10 py-10
+                        lg:grid lg:grid-cols-2
                         dark:border-text_dark/20
                     '
                 >
@@ -209,15 +233,21 @@ export const Home = () => {
                     '
                 >
                     <p
-                        className='font-semibold text-lg opacity-75'
+                        className='text-sm font-semibold opacity-75
+                            lg:text-lg md:text-lg
+                        '
                     >
                         Copyright © 2024 mvcode.com.br Todos os direitos reservados.
                     </p>
                     <div
-                        className='flex items-center gap-2 w-44'
+                        className='flex flex-col items-center gap-2 w-44
+                            lg:flex-row md:flex-row
+                        '
                     >
                         <h4
-                            className='text-lg font-bold opacity-75'
+                            className='text-sm font-bold opacity-75
+                                lg:text-lg md:text-lg 
+                            '
                         >
                             Powered by
                         </h4>

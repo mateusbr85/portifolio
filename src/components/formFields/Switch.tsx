@@ -2,9 +2,10 @@ import { useState } from "react";
 
 type SwitchProps = {
     onClick?: ({ value }: { value: boolean }) => void
+    value?: boolean
 }
 
-export const Switch = ({ ...props }: SwitchProps) => {
+export const Switch = ({ value = false,...props }: SwitchProps) => {
     const [isChecked, setIsChecked] = useState(false);
 
     const toggleSwitch = () => {
@@ -21,11 +22,12 @@ export const Switch = ({ ...props }: SwitchProps) => {
             <input
                 type='checkbox'
                 className='sr-only absolute'
+                defaultChecked={value}
+                checked={value}
             ></input>
             <span className={`w-5 h-5 bg-background_light absolute rounded-full duration-300 transition-all ${isChecked ? 'right-1' : ''}`}
                 onClick={() => toggleSwitch()}
             >
-
             </span>
         </label>
     )
