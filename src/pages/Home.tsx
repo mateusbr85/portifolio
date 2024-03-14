@@ -8,6 +8,7 @@ import { Typewriter } from 'react-simple-typewriter';
 import { Timeline } from '../components/formFields/Timeline';
 import { SectionSkins } from '../components/Home/Sections/SectionSkins';
 import Logo from '../assets/logo.png'
+import { ReadSection } from '../components/Home/Sections/ReadSection';
 
 export const Home = () => {
     const { theme } = useTheme();
@@ -226,6 +227,7 @@ export const Home = () => {
                         />
                     </Timeline.Root>
                 </section>
+                <ReadSection/>
                 <SectionSkins/>
                 <footer
                     className='container mx-auto flex h-20 justify-between items-center
