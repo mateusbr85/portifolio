@@ -6,11 +6,11 @@ interface BoxProps extends HtmlHTMLAttributes<HTMLDivElement> {
     hrefButton?: string
 }
 
-export const Box: React.FC<BoxProps> = ({children, ...props}) => {
+export const Box: React.FC<BoxProps> = ({children, hrefButton,...props}) => {
 
 
     return (
-        <a href={props.hrefButton} target="_blank">
+        <a href={hrefButton} target="_blank">
             <div
                 {...props}
                 className='w-20 h-20 bg-accent_light rounded-lg cursor-pointer flex items-center justify-center text-background_light

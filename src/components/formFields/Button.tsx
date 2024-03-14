@@ -8,7 +8,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     hrefButton?: string
 }
 
-export const Button: React.FC<ButtonProps> = ({ children, hrefButton = '',...props }) => {
+export const Button: React.FC<ButtonProps> = ({ children, hrefButton = '',colorButton,...props }) => {
     const [colors,setColors] = useState(
         {
             text_color: 'text-background_light',
@@ -35,7 +35,7 @@ export const Button: React.FC<ButtonProps> = ({ children, hrefButton = '',...pro
         }
     }
     useEffect(() => {
-        choseColor(props.colorButton)
+        choseColor(colorButton)
     },[])
     return (
         <div className=''>
