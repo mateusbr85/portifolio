@@ -7,7 +7,7 @@ export const ReadSection = () => {
     useEffect(() => {
         axios.get('https://dev.to/api/articles',{
             params: {
-                username: 'mateusvelosodev'
+                username: 'mvcode'
             }
         })
         .then((response: any) => {

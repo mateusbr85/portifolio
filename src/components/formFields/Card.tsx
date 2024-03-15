@@ -17,7 +17,7 @@ export const Card = ({tagList = [],...props}: CardProps) => {
             <a href={props.href} target="_blank">
                 <div
                     id={props.id}
-                    className="flex flex-col h-96 w-[27rem] overflow-hidden cursor-pointer
+                    className="flex flex-col min-h-96 max-w-[27rem] overflow-hidden cursor-pointer
                         rounded-lg bg-white border-2 border-accent_light/20
                         dark:bg-secundary_dark dark:text-text_dark dark:shadow-primary_dark dark:shadow-md
                         "
@@ -47,7 +47,7 @@ export const Card = ({tagList = [],...props}: CardProps) => {
                             {props.description}
                         </p>
                         <div
-                            className="flex flex-wrap gap-5"
+                            className="flex flex-wrap gap-4"
                         >
                             {tagList?.length > 0 && (
                                 tagList?.map((value: any,index: any) => {
