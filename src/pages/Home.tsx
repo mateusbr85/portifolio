@@ -230,7 +230,7 @@ export const Home = () => {
                 <ReadSection/>
                 <SectionSkins/>
                 <footer
-                    className='container mx-auto flex h-20 justify-between items-center
+                    className='container mx-auto flex min-h-20 justify-between items-center
                         dark:text-text_dark
                     '
                 >
