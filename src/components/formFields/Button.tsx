@@ -5,10 +5,11 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     heigth?: string,
     // colorButton?: string
     colorButton: 'primary' | 'secundary',
-    hrefButton?: string
+    hrefButton?: string,
+    downloadButton?: string
 }
 
-export const Button: React.FC<ButtonProps> = ({ children, hrefButton = '',colorButton,...props }) => {
+export const Button: React.FC<ButtonProps> = ({ children, hrefButton = '',colorButton,downloadButton,...props }) => {
     const [colors,setColors] = useState(
         {
             text_color: 'text-background_light',
@@ -34,12 +35,21 @@ export const Button: React.FC<ButtonProps> = ({ children, hrefButton = '',colorB
             )
         }
     }
+    let propsTagA: any = {
+        href:hrefButton
+    }
+    if(downloadButton) {
+        propsTagA = {
+            ...propsTagA,
+            download: downloadButton
+        }
+    }
     useEffect(() => {
         choseColor(colorButton)
     },[])
     return (
         <div className=''>
-            <a href={hrefButton}>
+            <a {...propsTagA}>
                 <button
                     {...props}
                     className={`

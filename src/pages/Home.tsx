@@ -9,6 +9,7 @@ import { Timeline } from '../components/formFields/Timeline';
 import { SectionSkins } from '../components/Home/Sections/SectionSkins';
 import Logo from '../assets/logo.png'
 import { ReadSection } from '../components/Home/Sections/ReadSection';
+import curriculum from '../assets/files/curriculum-mateus.pdf';
 
 export const Home = () => {
     const { theme } = useTheme();
@@ -69,10 +70,22 @@ export const Home = () => {
                             lg:justify-start lg:flex-wrap lg:flex-row
                             '
                         >
-                            <Button
+                            {/* <Button
                                 colorButton='primary'
                             >
                                 Aprenda Node Comigo
+                            </Button> */}
+                            <Button
+                                hrefButton={curriculum}
+                                colorButton='primary'
+                                downloadButton='curriculum'
+                            >
+                                <div className='flex flex-row gap-2 items-center'>
+                                    <i className="fas fa-cloud-download-alt"></i>
+                                    <p>
+                                        Download CV
+                                    </p>
+                                </div>
                             </Button>
                             <Button
                                 colorButton='secundary'
@@ -148,11 +161,13 @@ export const Home = () => {
                             </div>
                             <div>
                                 <p
-                                    className='text-sm text-justify'
+                                    className='text-sm text-justify lg:text-lg'
                                 >
-                                    Meu nome é Mateus Veloso, sou criador da marca MvCode, que é responsável por criar conteúdos para programadores no Instagram e YouTube, desenvolvendo um trabalho de geração de valor em conteúdo sobre programação. Atualmente trabalho como Desenvolvedor FullStack na NEC Brasil desenvolvimento de sistemas, mas também atuo como Freelancer Developer. Sou uma pessoa que ama desafios, assim como todo desenvolvedor.
+                                    Meu nome é Mateus Veloso, <span className='font-bold'>criador da marca MvCode</span>, focada em criar conteúdos de valor para programadores no Instagram e YouTube, ajudando a expandir conhecimentos em programação e desenvolvimento. <span className='font-bold'>Atualmente, trabalho como Desenvolvedor FullStack na CI&T, uma das maiores empresas de tecnologia do Brasil</span>, utilizando principalmente Java com Spring e Angular para desenvolvimento de soluções robustas e inovadoras.
+                                    <br />
+                                    Além disso, atuo como Freelancer Developer, oferecendo soluções personalizadas e práticas para projetos web e cloud.
 
-                                    Tenho mais de 3 anos de Experiência no mercado de desenvolvimento Web. Durante esse período, projetei, arquitetei e entreguei inúmeros projetos, desde de Aplicações front-end quanto Apis para o Back-end, nisso desenvolvi soluções completas para servidores linux e nuvem. Meus conhecimento atual inclui principalmente TypeScript, React.js, React-Native e Node.js.
+                                    <span className='font-bold'> Com mais de 4 anos de experiência no mercado,</span> já projetei, arquitetei e entreguei projetos variados, desde aplicações front-end até APIs back-end, além de desenvolver soluções completas para servidores Linux e ambientes em nuvem. Meu conhecimento atual inclui principalmente <span className='font-bold'>TypeScript, React.js, React-Native e Node.js</span>. Sou uma pessoa apaixonada por desafios, sempre buscando aprimorar minha técnica e entregar soluções de impacto para cada projeto.
                                 </p>
                             </div>
                             <div
@@ -227,8 +242,8 @@ export const Home = () => {
                         />
                     </Timeline.Root>
                 </section>
-                <ReadSection/>
-                <SectionSkins/>
+                <ReadSection />
+                <SectionSkins />
                 <footer
                     className='container mx-auto flex min-h-20 justify-between items-center
                         dark:text-text_dark
@@ -253,7 +268,7 @@ export const Home = () => {
                         >
                             Powered by
                         </h4>
-                        <img 
+                        <img
                             className='w-14 h-14'
                             src={Logo}
                         />
