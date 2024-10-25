@@ -217,9 +217,17 @@ export const Home = () => {
                     </h2>
                     <Timeline.Root>
                         <Timeline.TimelineContent
+                            title='Analista de Software Pleno'
+                            subTitle='CI&T'
+                            time='Desde agosto de 2024'
+                            descrption={`Responsável por atuar em projetos Front-End e Backend em um dos maiores bancos do Brasil, 
+                                aonde atuo com ferramentes e liguagens aplamente conhecidas como Java, Javascript e Frameworks como Angular, Spring e Node.
+                            `}
+                        />
+                        <Timeline.TimelineContent
                             title='Full-Stack Developer Pleno'
                             subTitle='NEC Brasil Desenvolvimento de Sistemas'
-                            time='Desde de Agosto de 2022'
+                            time='Desde de Agosto de 2022 até agosto de 2024'
                             descrption='Fui Promovido nesse momento a desenvolvedor pleno com resposabilidade de criar novas aplicações e manter
                                 as mais diversas e antigas aplicações, também estou com responsabilidade para cuidar e gerenciar 3 projetos
                                 aonde não apenas sou responsável pelo meu codigo, como no treinamento e Code Review de codigos de terceiros'
@@ -227,18 +235,12 @@ export const Home = () => {
                         <Timeline.TimelineContent
                             title='Full-Stack Developer Junior'
                             subTitle='NEC Brasil Desenvolvimento de Sistemas'
-                            time='Desde de janeiro de 2022'
+                            time='Desde de agosto de 2021'
                             descrption='Eu tive a autonomia para arquitetar, construir e desenvolver projetos do zero, abrangendo a implantação em 
                                 produção e a subsequente manutenção. Desenvolvi projetos com foco na resolução de problemas e na otimização de processos 
                                 internos. Criei websites institucionais e páginas de vendas para produtos da empresa. Nestes projetos, empreguei a arquitetura 
                                 MVC, Arquitetura Limpa e Arquitetura Hexagonal, utilizando Node.Js com Express no backend, PostgreSQL com Sequelize ORM para o banco de dados, e ReactJS com Redux e 
                                 zustand no frontend.'
-                        />
-                        <Timeline.TimelineContent
-                            title='Estagio'
-                            subTitle='NEC Brasil Desenvolvimento de Sistemas'
-                            time='Desde de Agosto de 2021'
-                            descrption='Trabalhava apenas com pequenas manutenções no Código, e poucos novas iomplementações'
                         />
                     </Timeline.Root>
                 </section>
