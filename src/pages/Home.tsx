@@ -133,7 +133,7 @@ export const Home = () => {
                         </div>
                         <div
                             className='flex flex-col text-start justify-between gap-5
-                                lg:w-[60%] lg:gap-0
+                                lg:w-[60%] lg:gap-2
                             '
                         >
                             <div

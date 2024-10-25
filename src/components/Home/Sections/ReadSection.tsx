@@ -11,7 +11,6 @@ export const ReadSection = () => {
             }
         })
         .then((response: any) => {
-            console.log('teste', response)
             if(response.data) {
                 setData(response.data)
             }
