@@ -2,7 +2,7 @@
 import Logo from '../../assets/logo.png'
 import { Switch } from '../formFields/Switch';
 import { useTheme } from '../../context/ThemeProvider';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const LiHover = ({ ...props }: { text: string }) => {
     return (
@@ -33,6 +33,16 @@ export const Header = () => {
         }
         setDark(value)
     }
+
+    useEffect(() => {
+        if(localStorage.getItem('theme-dark-or-light')){
+            const isDarkValue = localStorage.getItem('theme-dark-or-light');
+            if(isDarkValue == 'dark'){
+                console.log('entrei')
+                setDark(true)
+            }
+        }
+    },[])
 
     return (
         <>

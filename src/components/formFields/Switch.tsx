@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type SwitchProps = {
     onClick?: ({ value }: { value: boolean }) => void
@@ -7,6 +7,14 @@ type SwitchProps = {
 
 export const Switch = ({ value = false,...props }: SwitchProps) => {
     const [isChecked, setIsChecked] = useState(false);
+
+
+    useEffect(() => {
+        if(value) {
+            setIsChecked(value)
+        }
+    },[value])
+
 
     const toggleSwitch = () => {
         setIsChecked(!isChecked);
