@@ -90,7 +90,11 @@ export const Home = () => {
                             <Button
                                 colorButton='secundary'
                             >
-                                Tire sua ideia do Papel
+                                <div
+                                    className='flex flex-row gap-2 items-center'
+                                >
+                                    <i className="fas fa-fire-alt text-accent_light"></i> <p>Vamos tirar sua ideia do papel</p>
+                                </div>
                             </Button>
                             <Button
                                 colorButton='secundary'
