@@ -9,8 +9,8 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     downloadButton?: string
 }
 
-export const Button: React.FC<ButtonProps> = ({ children, hrefButton = '',colorButton,downloadButton,...props }) => {
-    const [colors,setColors] = useState(
+export const Button: React.FC<ButtonProps> = ({ children, hrefButton = '', colorButton, downloadButton, ...props }) => {
+    const [colors, setColors] = useState(
         {
             text_color: 'text-background_light',
             bg_color: 'bg-accent_light'
@@ -18,7 +18,7 @@ export const Button: React.FC<ButtonProps> = ({ children, hrefButton = '',colorB
     )
 
     const choseColor = (color: string) => {
-        if(color === 'primary') {
+        if (color === 'primary') {
             setColors(
                 {
                     bg_color: 'bg-primary_light',
@@ -26,7 +26,7 @@ export const Button: React.FC<ButtonProps> = ({ children, hrefButton = '',colorB
                 }
             )
         }
-        if(color === 'secundary') {
+        if (color === 'secundary') {
             setColors(
                 {
                     bg_color: 'bg-secundary_light',
@@ -36,9 +36,9 @@ export const Button: React.FC<ButtonProps> = ({ children, hrefButton = '',colorB
         }
     }
     let propsTagA: any = {
-        href:hrefButton
+        href: hrefButton
     }
-    if(downloadButton) {
+    if (downloadButton) {
         propsTagA = {
             ...propsTagA,
             download: downloadButton
@@ -46,13 +46,14 @@ export const Button: React.FC<ButtonProps> = ({ children, hrefButton = '',colorB
     }
     useEffect(() => {
         choseColor(colorButton)
-    },[])
+    }, [])
     return (
         <div className=''>
-            <a {...propsTagA}>
-                <button
-                    {...props}
-                    className={`
+            {hrefButton ? (
+                <a {...propsTagA}>
+                    <button
+                        {...props}
+                        className={`
                     max-w-screen-md max-h-screen ${colors.bg_color} ${colors.text_color} rounded-md
                     dark:bg-primary_dark dark:text-background_light
                     flex
@@ -62,10 +63,30 @@ export const Button: React.FC<ButtonProps> = ({ children, hrefButton = '',colorB
                     p-2
                     drop-shadow-md
                 `}
-                >
-                    {children}
-                </button>
-            </a>
+                    >
+                        {children}
+                    </button>
+                </a>
+
+            ) : (
+                <>
+                    <button
+                        {...props}
+                        className={`
+                    max-w-screen-md max-h-screen ${colors.bg_color} ${colors.text_color} rounded-md
+                    dark:bg-primary_dark dark:text-background_light
+                    flex
+                    items-center
+                    justify-center
+                    container mx-auto
+                    p-2
+                    drop-shadow-md
+                `}
+                    >
+                        {children}
+                    </button>
+                </>
+            )}
         </div>
     )
 }
