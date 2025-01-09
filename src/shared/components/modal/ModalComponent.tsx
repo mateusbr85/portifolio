@@ -13,7 +13,7 @@ export const ModalComponent: FC<IModalComponent> = ({
     acceptButtonTitle,
     decclineButtonFunction
 }) => {
-    const {show,setShow, acceptButton, closeModal, openModal, } = ModalComponentFunction({
+    const {show, acceptButton, closeModal, } = ModalComponentFunction({
         showModal,
         acceptButtonFunction: accepetButtonFunction,
         closeModalFunction: decclineButtonFunction
