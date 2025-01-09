@@ -9,7 +9,7 @@ export const PropositureSend: FC<IPropositureSend> = ({closeAction,show}) => {
     return (
         <>
             <ModalComponent
-                showModal={true}
+                showModal={show}
                 title={<span className="font-semibold">Seu proximo projeto esta proximo de se tornar realidade!</span>}
                 accepetButtonFunction={() => console.log('clique')}
                 decclineButtonFunction={closeAction}
