@@ -1,6 +1,6 @@
 import { cva, VariantProps } from "class-variance-authority"
 import clsx from "clsx"
-import React, { DialogHTMLAttributes, HTMLAttributes, isValidElement, ReactNode } from "react"
+import React, { DialogHTMLAttributes, isValidElement, ReactNode } from "react"
 
 
 const DialogVariants = cva(
