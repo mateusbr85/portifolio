@@ -26,7 +26,7 @@ export const PropositureSend: FC<IPropositureSend> = ({closeAction,show}) => {
                             Nome
                         </label>
                         <Input
-                            onBlur={(value) => {
+                            onBlur={() => {
 
                             }}
                             placeholder="Insira aqui o texto..."
@@ -40,7 +40,7 @@ export const PropositureSend: FC<IPropositureSend> = ({closeAction,show}) => {
                             Nome da Empresa
                         </label>
                         <Input
-                            onBlur={(value) => {
+                            onBlur={() => {
 
                             }}
                             placeholder="Insira aqui o texto..."
@@ -54,7 +54,7 @@ export const PropositureSend: FC<IPropositureSend> = ({closeAction,show}) => {
                             Email
                         </label>
                         <Input
-                            onBlur={(value) => {
+                            onBlur={() => {
 
                             }}
                             placeholder="Insira aqui o texto..."
@@ -68,7 +68,7 @@ export const PropositureSend: FC<IPropositureSend> = ({closeAction,show}) => {
                             Celular (WhatsApp)
                         </label>
                         <Input
-                            onBlur={(value) => {
+                            onBlur={() => {
 
                             }}
                             placeholder="Insira aqui o texto..."
@@ -83,7 +83,7 @@ export const PropositureSend: FC<IPropositureSend> = ({closeAction,show}) => {
                         </label>
                         <textarea
                             className="border border-gray-200 rounded-md p-2 focus:outline-accent_light/20"
-                            onBlur={(value) => {
+                            onBlur={() => {
 
                             }}
                             placeholder="Insira aqui o texto..."
