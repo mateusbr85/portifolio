@@ -11,3 +11,5 @@ export const Header: FC<HeaderProps> = ({ children }) => {
         </>
     )
 }
+
+Header.displayName = "Header";

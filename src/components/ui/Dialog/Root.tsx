@@ -37,14 +37,15 @@ export const Root: React.FC<IDialogRoot> = ({ size = "default", className, ...pr
 
     React.Children.forEach(props.children, (child) => {
         if(isValidElement(child)) {
+            const componentType = child.type as React.JSXElementConstructor<any> & { displayName?: string };
             if(typeof child.type === "function") {
-                if(child.type?.name === "Header") {
+                if(componentType.displayName  === "Header") {
                     headerContent = child;
                 }
-                if(child.type?.name === "Body") {
+                if(componentType.displayName  === "Body") {
                     bodyContent = child;
                 }
-                if(child.type?.name === "Footer") {
+                if(componentType.displayName  === "Footer") {
                     footerContent = child;
                 }
             }
@@ -59,10 +60,10 @@ export const Root: React.FC<IDialogRoot> = ({ size = "default", className, ...pr
                 <div
                     className="flex flex-col items-center justify-center h-screen w-full  bg-black bg-opacity-30 z-50 fixed top-0 left-0 right-0 bottom-0"
                 >
-
                     <div
                         className={clsx(DialogVariants({ size }), className)}
-                    >
+                        >
+                        testetsette
                         <div>
                             {headerContent}
                         </div>

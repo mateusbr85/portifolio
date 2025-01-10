@@ -11,3 +11,6 @@ export const Footer: FC<FooterProps> = ({ children }) => {
         </>
     )
 }
+
+
+Footer.displayName = "Footer";

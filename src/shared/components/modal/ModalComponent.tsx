@@ -26,6 +26,7 @@ export const ModalComponent: FC<IModalComponent> = ({
                 showDialog={show}
             >
                 <DialogUi.Header>
+                    testando
                     <div>
                         {title}
                     </div>

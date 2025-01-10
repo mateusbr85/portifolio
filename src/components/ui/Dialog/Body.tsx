@@ -11,3 +11,5 @@ export const Body: FC<BoodyProps> = ({ children }) => {
         </>
     )
 }
+
+Body.displayName = "Body"
