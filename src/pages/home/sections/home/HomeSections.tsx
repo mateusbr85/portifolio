@@ -79,7 +79,7 @@ export const HomeSection: FC = () => {
                                 </p>
                             </div>
                         </Button>
-                        <Button
+                        {/* <Button
                             colorButton='secundary'
                         >
                             <div
@@ -88,7 +88,7 @@ export const HomeSection: FC = () => {
                             >
                                 <i className="fas fa-fire-alt text-accent_light"></i> <p>Vamos tirar sua ideia do papel</p>
                             </div>
-                        </Button>
+                        </Button> */}
                         <Button
                             colorButton='secundary'
                             hrefButton='#about'

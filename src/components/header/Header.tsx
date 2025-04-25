@@ -69,15 +69,15 @@ export const Header = () => {
                                 <LiHover
                                     text='Home'
                                 />
-                                <LiHover
+                                {/* <LiHover
                                     text='Blog'
-                                />
+                                /> */}
                                 <LiHover
                                     text='Setup'
                                 />
-                                <LiHover
+                                {/* <LiHover
                                     text='eBook'
-                                />
+                                /> */}
                             </ul>
                         </div>
                         <div className='flex flex-row items-center top-0 h-6 gap-2'>
@@ -118,15 +118,15 @@ export const Header = () => {
                 <a href="">
                     Home
                 </a>
-                <a href="">
+                {/* <a href="">
                     Blog
-                </a>
+                </a> */}
                 <a href="">
                     Setup
                 </a>
-                <a href="">
+                {/* <a href="">
                     eBook
-                </a>
+                </a> */}
                 <div className='flex flex-row items-center top-0 h-6 gap-2'>
                     <Switch
                         onClick={(event) => toogleDark({ value: event.value })}
